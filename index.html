@@ -42,7 +42,7 @@
   <div class="banner-overlay">
     <div class="container">
       <h1 class="text-capitalize">Any Work, We Work for You</h1>
-      <p>Raise a work request by using Contact us form in the below button.</p>
+      <p>Raise a work request along with description by using below contact button, Our team will connect with you with-in 2 minutes</p>
       <a href="#" data-scroll-nav="4" class="banner-btn">CONTACT US</a> </div>
   </div>
 </div>
@@ -514,10 +514,13 @@ $(function () {
 });
 
     function sendMail() {
+        var subject = document.getElementById("form_subject").value;
+        var Body = document.getElementById("form_message").value;
         var link = "mailto:sivamgobinath@gmail.com"
-            + "?cc=myCCaddress@example.com"
-            + "&subject=" + encodeURIComponent("This is my subject")
-            + "&body=" + encodeURIComponent("body of the content")
+            //+ "?cc=myCCaddress@example.com"
+            //+ "&subject=" + encodeURIComponent("This is my subject")
+            + "?subject=" + subject
+            + "&body=" + Body
             ;
 
         window.location.href = link;
